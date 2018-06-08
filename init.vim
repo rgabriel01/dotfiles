@@ -25,6 +25,7 @@ set nowb
 set splitbelow
 set splitright
 set colorcolumn=79
+set clipboard=unnamedplus
 
 " KEY MAPPING
   " WINDOW NAVIGATION
@@ -54,6 +55,7 @@ colorscheme hybrid_material
 
 " FZF STUFF
 let $FZF_DEFAULT_COMMAND = "fd . --type file --hidden --no-ignore --exclude '{.git,doc*/,node_modules,vendor,build,tmp,*.sty}'"
+nnoremap <leader>b :Buffer<CR>
 
 "NERDTree Stuff
 let g:NERDTreeDirArrowExpandable="+"
