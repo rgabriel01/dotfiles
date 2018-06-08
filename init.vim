@@ -24,6 +24,7 @@ set nobackup
 set nowb
 set splitbelow
 set splitright
+set colorcolumn=79
 
 " KEY MAPPING
   " WINDOW NAVIGATION
@@ -37,6 +38,15 @@ set splitright
   nnoremap vv <C-w>v
   " CLOSE CURRENT TAB
   nnoremap Q :q!<CR>
+  " TABS
+  nnoremap <C-t> :tabnew<CR>
+  nnoremap nt :tabnext<CR>
+	" SAVE
+  nnoremap <C-s> :w<CR>
+  " CLIPBOARD
+  inoremap <C-v> <ESC>"+pa
+  vnoremap <C-c> "+y
+  vnoremap <C-d> "+d
 
 " THEME
 set background=dark
