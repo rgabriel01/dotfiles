@@ -24,8 +24,10 @@ set nobackup
 set nowb
 set splitbelow
 set splitright
-set colorcolumn=79
+set colorcolumn=140
 set clipboard=unnamedplus
+set ignorecase
+set smartcase
 
 " KEY MAPPING
   " WINDOW NAVIGATION
@@ -60,7 +62,8 @@ nnoremap <leader>b :Buffer<CR>
 "NERDTree Stuff
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="-"
-map <C-N> :NERDTreeToggle<cr>
+map <C-N> :NERDTreeToggle<CR>
+map <C-\> :NERDTreeFind<CR>
 
 " GREPPER
 runtime plugin/grepper.vim
