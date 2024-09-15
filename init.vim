@@ -28,6 +28,17 @@ set colorcolumn=140
 set clipboard=unnamedplus
 set ignorecase
 set smartcase
+set encoding=utf-8
+set fileencoding=utf-8
+set synmaxcol=120
+
+set lazyredraw
+
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+set spell spelllang=en_us
 
 " KEY MAPPING
   " WINDOW NAVIGATION
@@ -44,7 +55,7 @@ set smartcase
   " TABS
   nnoremap <C-t> :tabnew<CR>
   nnoremap nt :tabnext<CR>
-	" SAVE
+  " SAVE
   nnoremap <C-s> :w<CR>
   " CLIPBOARD
   inoremap <C-v> <ESC>"+pa
@@ -73,3 +84,9 @@ let g:grepper.tools =
   \ ['rg', 'git', 'grep']
 let g:grepper.rg.grepprg .= ' --type-add slim:*.slim --type-add haml:*.haml -g "!{.git,node_modules,vendor,build,tmp,yarn.lock,*.sty}/*"'
 map <leader>rg :GrepperRg<Space>
+
+" svelte
+au! BufNewFile,BufRead *.svelte set ft=html
+
+let dart_html_in_string=v:true
+let g:dart_style_guide = 2
